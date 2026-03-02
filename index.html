@@ -1,160 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shaik Numair Ahmed Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numair Ahmed | Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header {
-      background: #020617;
-      text-align: center;
-      padding: 40px 20px;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
+body{
+background:linear-gradient(-45deg,#020617,#0f172a,#020617,#1e293b);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:#e2e8f0;
+}
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
 
-    header p {
-      margin: 5px;
-      color: #38bdf8;
-    }
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:rgba(2,6,23,0.7);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+}
+nav h2{color:#38bdf8;}
+nav a{color:#cbd5f5;margin-left:25px;text-decoration:none;}
+nav a:hover{color:#38bdf8}
 
-    section {
-      padding: 40px;
-      border-bottom: 1px solid #1e293b;
-    }
+/* HERO */
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+.hero h1{font-size:42px;}
+.hero span{color:#38bdf8;}
+.typing{
+font-size:20px;
+margin-top:10px;
+color:#22c55e;
+height:25px;
+}
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+border-radius:30px;
+color:black;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+.btn:hover{transform:scale(1.05);}
 
-    h2 {
-      color: #38bdf8;
-    }
+/* SECTION */
+section{padding:70px 60px;}
+section h2{text-align:center;color:#38bdf8;margin-bottom:40px;}
 
-    .card {
-      background: #1e293b;
-      padding: 15px;
-      border-radius: 10px;
-      margin: 10px 0;
-    }
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(12px);
+transition:.3s;
+border:1px solid rgba(255,255,255,0.1);
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 15px #38bdf8;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+/* CONTACT FORM */
+input,textarea{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:6px;
+}
+button{
+padding:12px 20px;
+background:#38bdf8;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+color:#94a3b8;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Shaik Numair Ahmed</h1>
-  <p>Associate Developer | IoT | AI | Blockchain | Full Stack</p>
-  <p>Email: numairahmed20@gmail.com</p>
-</header>
+<nav>
+<h2>Numair</h2>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    Associate Developer with strong experience in IoT, AI, Blockchain and software engineering.
-    Built 100+ prototypes and led hackathons. Currently working at Wipro in fraud detection,
-    risk analysis and account security workflows.
-  </p>
+<div class="hero">
+<h1>Hi, I'm <span>Shaik Numair Ahmed</span></h1>
+<div class="typing" id="typing"></div>
+<a href="#" class="btn">Download Resume</a>
+</div>
+
+<section id="about">
+<h2>About Me</h2>
+<p style="max-width:800px;margin:auto;text-align:center;">
+Associate Developer with expertise in IoT, AI, Blockchain and Fraud Security Systems.
+Built 100+ prototypes and led 50+ hackathons. Currently working at Wipro in ATO security & risk analysis.
+</p>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <div class="card">Python, C, JavaScript, HTML, CSS</div>
-  <div class="card">Node.js, Express.js, MongoDB</div>
-  <div class="card">IoT, AI/ML, AWS IoT, Alexa Console</div>
-  <div class="card">Project Management, Debugging, MS Office</div>
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">Python, C, JavaScript</div>
+<div class="card">Node.js, Express, MongoDB</div>
+<div class="card">AI/ML, IoT, AWS IoT</div>
+<div class="card">Blockchain & Smart Systems</div>
+<div class="card">Git, Debugging, Project Management</div>
+</div>
 </section>
 
-<section>
-  <h2>Projects</h2>
-
-  <div class="card">
-    <b>Blockchain Voting System</b>
-    <ul>
-      <li>Secure voting system using Node.js, Express & MongoDB</li>
-      <li>Blockchain validation for tamper-proof voting</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <b>AI Disease Detection</b>
-    <ul>
-      <li>ML image detection for plant & animal diseases</li>
-      <li>Improved early diagnosis for agriculture</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <b>Gesture Controlled Appliances</b>
-    <ul>
-      <li>IoT-based touchless appliance control</li>
-      <li>Arduino + sensors integration</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <b>Pothole Detection System</b>
-    <ul>
-      <li>AI model to detect road damage</li>
-      <li>Supports smart city maintenance</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <b>Hackathon Hosting Website</b>
-    <ul>
-      <li>Platform for event registration & submissions</li>
-      <li>Managed users and project uploads</li>
-    </ul>
-  </div>
-
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>Blockchain Voting</h3></div>
+<div class="card"><h3>AI Disease Detection</h3></div>
+<div class="card"><h3>Pothole Detection</h3></div>
+<div class="card"><h3>Hackathon Platform</h3></div>
+<div class="card"><h3>Gesture IoT System</h3></div>
+</div>
 </section>
 
-<section>
-  <h2>Experience</h2>
-
-  <div class="card">
-    <b>Wipro – Senior Associate Analyst</b>
-    <p>Fraud detection, ATO security, risk workflows, team leadership & audits</p>
-  </div>
-
-  <div class="card">
-    <b>MakeSkilled – Associate Developer</b>
-    <p>Developed 100+ IoT, AI & Blockchain prototypes and led 50+ hackathons</p>
-  </div>
-
+<section id="experience">
+<h2>Experience</h2>
+<div class="grid">
+<div class="card">
+<h3>Wipro</h3>
+<p>Senior Associate Analyst – Fraud & ATO Security</p>
+</div>
+<div class="card">
+<h3>MakeSkilled</h3>
+<p>Associate Developer – IoT, AI & Blockchain</p>
+</div>
+</div>
 </section>
 
-<section>
-  <h2>Achievements</h2>
-  <ul>
-    <li>SIH 2023 Winning Team Mentor</li>
-    <li>Best Mentor Award + 6+ accolades</li>
-    <li>Hackathon Jury Member</li>
-    <li>Guest Lecturer in colleges</li>
-  </ul>
+<section id="contact">
+<h2>Contact</h2>
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+<button>Send Message</button>
+</form>
+<p style="text-align:center;margin-top:10px;">
+LinkedIn: linkedin.com/in/shaiknumairahmed
+</p>
 </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: numairahmed20@gmail.com</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/shaiknumairahmed/">View Profile</a></p>
-</section>
+<footer>
+© 2026 Shaik Numair Ahmed | Ultra Portfolio
+</footer>
+
+<script>
+const text = ["Full Stack Developer","AI Engineer","IoT Innovator","Blockchain Developer"];
+let i=0,j=0,current='',isDeleting=false;
+
+function type(){
+if(i<text.length){
+if(!isDeleting && j<=text[i].length){
+current=text[i].substring(0,j++);
+}
+else if(isDeleting && j>=0){
+current=text[i].substring(0,j--);
+}
+document.getElementById("typing").innerHTML=current;
+
+if(j==text[i].length) isDeleting=true;
+if(j==0){isDeleting=false;i++; if(i==text.length)i=0;}
+
+setTimeout(type,120);
+}
+}
+type();
+</script>
 
 </body>
 </html>
